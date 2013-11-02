@@ -12,7 +12,7 @@ You will find informations there too.
 
 ## Why?
 
-Because equimose in the nose. I needed something but on server side.
+Because ecchymose in the nose. I needed something but on server side.
 
 With expressjs for instance, you can get your request IP, then just need to use this library that will make the call to get user location data.
 
