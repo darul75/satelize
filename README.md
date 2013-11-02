@@ -4,11 +4,11 @@
 <!-- [![Dependency Status](https://gemnasium.com/gummesson/geno.png)](https://gemnasium.com/gummesson/geno)
 [![Build Status](https://travis-ci.org/gummesson/geno.png?branch=master)](https://travis-ci.org/gummesson/geno) -->
 
-**Geno** is a small and opinionated static site generator for easily generating a simple site for your [NPM](https://npmjs.org/) projects based on the project's `package.json` file.
+**Satelize** is a small implementation for NODEJS to retrieve user location based on IP, combined with expressjs for instance make life easier to get latitude/longitude of your visitor.
 
 ## Why?
 
-Because hand crafting a new site for each project can be quite tedious.
+Because equimose in the nose.
 
 ## Installation
 
@@ -20,45 +20,23 @@ npm install satelize
 
 Run the following in the root directory of your project:
 
-~~~
-geno
-~~~
-
-**BOOM!** Your project site has been generated.
-
-### geno.json
-
-Adding a `geno.json` in your project's root directory will enable you to add some additional information to your site:
-
 ~~~ json
 {
-  "title": "...",
-  "introduction": "<p>...</p>",
-  "installation": "<p>...</p>",
-  "usage": "<p>...</p>",
-  "output": "path/to/ouput",
-  "template": "path/to/custom/template",
-  "stylesheet": "path/to/custom/stylesheet",
-  "javascript": "path/to/javascript/file",
-  "docco": "path/to/docs",
-  "endorse": true
+  {
+    "ip": "46.19.37.108",
+    "country_code": "NL",
+    "country_code3": "NLD",
+    "country": "Netherlands",
+    "continent_code": "EU",
+    "latitude": 52.5,
+    "longitude": 5.75,
+    "dma_code": "0",
+    "area_code": "0",
+    "asn": "AS196752",
+    "isp": "Tilaa V.O.F.",
+    "timezone":"Europe/Amsterdam"
 }
 ~~~
-
-- `title` is used for naming your module. For example, if you have a module registered as `node-my-module` but you want to call it `My Module` you can add your own value and easily change that. It'll otherwise default to the `name` in specified in the `package.json` file.
-- `introduction` is a longer description field that can be used in favor of the `description` in the `package.json` file.
-- `installation` is used for adding some additional installation instructions.
-- `usage` is for adding notes about the basic usage.
-- `output` is where the site will be generated. The default directory is `site`.
-- `template` is used for using your own custom template file.
-- `stylesheet` is used for using your own custom stylesheet file.
-- `javascript` is for adding a JavaScript file to your site.
-- `docco` is for simply linking to your [Docco](https://github.com/jashkenas/docco)-generated documentation.
-- `endorse` adds a link to this repository in site's footer. It's turned off by default.
-
-### Custom templates
-
-[Nunjucks](https://github.com/jlongster/nunjucks) is used as the default templating engine.
 
 ## License
 
