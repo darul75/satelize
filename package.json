@@ -1,0 +1,17 @@
+{
+  "name": "satelize",
+  "description": "Get IP address location",
+  "version": "0.0.1",
+  "keywords": [
+    "ip location geo address"
+  ],
+  "author": {
+    "name": "Julien Valéry",
+    "email": "darul75@gmail.com"
+  },
+  "main": "./index.js",
+  "engines": {
+    "node": ">=0.2.2"
+  },  
+  "readmeFilename": "README.md"
+}
