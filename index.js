@@ -23,27 +23,21 @@ exports.satelize = function(options, next) {
       res.setEncoding('utf8');
       var output = '';
 
-      res.on('data', 
-        function (chunk) {
+      res.on('data', function (chunk) {
           output += chunk;
       });
 
-      res.on('end', function() {      
-        try {          
-          return next(null, output);
-        }
-        catch(err) {
-          next(err);
-        }      
+      res.on('end', function() {                      
+        return next(null, output);        
       });
     });
 
     req.on('error', function(e) {
-      next(e);
+      return next(e);
     });
       
     req.setTimeout(1000, function() {
-      next(new Error('timeout'));
+      return next(new Error('timeout'));
     });
 
     req.end();
