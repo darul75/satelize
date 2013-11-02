@@ -4,13 +4,21 @@
 <!-- [![Dependency Status](https://gemnasium.com/gummesson/geno.png)](https://gemnasium.com/gummesson/geno)
 [![Build Status](https://travis-ci.org/gummesson/geno.png?branch=master)](https://travis-ci.org/gummesson/geno) -->
 
-**Satelize** is a small implementation for NODEJS to retrieve user location based on IP, combined with expressjs for instance make life easier to get latitude/longitude of your visitor.
+**Satelize** is a small implementation for NodeJS to retrieve user location based on IP, combined with expressjs for instance make life easier to get some stuff as latitude/longitude of your visitor.
+
+Inspired and using http://www.telize.com/ service.
+
+You will find informations there too.
 
 ## Why?
 
-Because equimose in the nose.
+Because equimose in the nose. I needed something but on server side.
 
-## Installation
+With expressjs for instance, you can get your request IP, then just need to use this library that will make the call to get user location data.
+
+And it is done.
+
+## Install
 
 ~~~
 npm install satelize
@@ -18,11 +26,35 @@ npm install satelize
 
 ## Usage
 
-Run the following in the root directory of your project:
+    satelize = require('satelize');
+    
+    satelize.satelize({ip:'46.19.37.108'}, function(err, geoData) {
+      if (err) next(err);
+      // if data is JSON, we may wrap it in js object
+      var obj = JSON.parse(geoData);
+      
+      res.send(geoData);
+    });
+    
+    
+    // MORE EXAMPLES
+    
+    satelize.satelize({ip:'46.19.37.108'}, function(err, geoData) {
+    }); // json output for this ip
+    
+    satelize.satelize({ip:'46.19.37.108', JSONP: true}, function(err, geoData) {
+    }); // jsonp output for this ip
+  
+    satelize.satelize({}, function(err, geoData) {
+    }); // json output request ip, meaning server
+    
+    satelize.satelize({, JSONP: true}, function(err, geoData) {
+    }); // jsonp output request ip
+    
+## Return    
 
 ~~~ json
 {
-  {
     "ip": "46.19.37.108",
     "country_code": "NL",
     "country_code3": "NLD",
@@ -38,11 +70,16 @@ Run the following in the root directory of your project:
 }
 ~~~
 
+## Options
+
+- ip : if not set, give request ip.
+- JSONP : if set give JSONP output, default format is json. I do not lije JSONP ;)
+
 ## License
 
 The MIT License (MIT)
 
-Copyright (c) 2013 Ellen Gummesson
+Copyright (c) 2013 Julien VALERY
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
