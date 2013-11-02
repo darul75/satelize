@@ -30,7 +30,8 @@ npm install satelize
     satelize = require('satelize');
     
     satelize.satelize({ip:'46.19.37.108'}, function(err, geoData) {
-      if (err) next(err);
+      // process err
+      
       // if data is JSON, we may wrap it in js object
       var obj = JSON.parse(geoData);
       
