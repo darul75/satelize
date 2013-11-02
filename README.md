@@ -97,7 +97,7 @@ Details
 ## Options
 
 - ip : if not set, give request ip.
-- JSONP : if set give JSONP output, default format is json. I do not lije JSONP ;)
+- JSONP : if set give JSONP output, default format is json. I do not like JSONP ;)
 
 ## License
 
