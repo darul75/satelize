@@ -3,6 +3,7 @@
 <!--[![NPM version](https://badge.fury.io/js/geno.png)](http://badge.fury.io/js/geno)-->
 <!-- [![Dependency Status](https://gemnasium.com/gummesson/geno.png)](https://gemnasium.com/gummesson/geno)
 [![Build Status](https://travis-ci.org/gummesson/geno.png?branch=master)](https://travis-ci.org/gummesson/geno) -->
+[![Build Status](https://travis-ci.org/darul75/satelize.png?branch=master)](https://travis-ci.org/darul75/satelize)
 
 **Satelize** is a small implementation for NodeJS to retrieve user location information based on IP, combined with expressjs for instance make life easier to get some stuff as latitude/longitude of your visitor.
 
