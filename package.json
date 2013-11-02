@@ -1,9 +1,17 @@
 {
   "name": "satelize",
-  "description": "Get IP address location",
+  "description": "Get location details (latitude, longitude...) from IP visitor, server side NodeJS module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/darul75/satelize"
+  },
   "version": "0.0.1",
   "keywords": [
-    "ip location geo address"
+    "ip",
+    "location",
+    "geolocation",
+    "address",
+    "nodejs",
   ],
   "author": {
     "name": "Julien Valéry",
@@ -11,7 +19,7 @@
   },
   "main": "./index.js",
   "engines": {
-    "node": ">=0.2.2"
+    "node": ">=0.8.16"
   },  
   "readmeFilename": "README.md"
 }
