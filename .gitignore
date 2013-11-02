@@ -1,6 +1,0 @@
-
-node_modules/.bin/_mocha
-
-node_modules/.bin/mocha
-
-node_modules/mocha/node_modules/mkdirp/test/umask.js
