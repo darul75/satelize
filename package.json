@@ -18,8 +18,14 @@
     "email": "darul75@gmail.com"
   },
   "main": "./index.js",
+  "scripts": {
+    "test": "mocha test/*.js"
+  },
   "engines": {
     "node": ">=0.8.16"
-  },  
+  },
+  "devDependencies": {   
+   "mocha": ""
+  },
   "readmeFilename": "README.md"
 }
