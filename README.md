@@ -33,7 +33,10 @@ npm install satelize
       // if data is JSON, we may wrap it in js object
       var obj = JSON.parse(geoData);
       
-      res.send(geoData);
+      
+      // if used with expressjs
+      // res.send(geoData);
+      // res.json...
     });
     
     
