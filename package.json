@@ -11,7 +11,7 @@
     "location",
     "geolocation",
     "address",
-    "nodejs",
+    "nodejs"
   ],
   "author": {
     "name": "Julien Valéry",
