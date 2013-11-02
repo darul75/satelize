@@ -1,12 +1,12 @@
 # Satelize
 
-<!-- [![NPM version](https://badge.fury.io/js/geno.png)](http://badge.fury.io/js/geno) -->
+<!--[![NPM version](https://badge.fury.io/js/geno.png)](http://badge.fury.io/js/geno)-->
 <!-- [![Dependency Status](https://gemnasium.com/gummesson/geno.png)](https://gemnasium.com/gummesson/geno)
 [![Build Status](https://travis-ci.org/gummesson/geno.png?branch=master)](https://travis-ci.org/gummesson/geno) -->
 
-**Satelize** is a small implementation for NodeJS to retrieve user location based on IP, combined with expressjs for instance make life easier to get some stuff as latitude/longitude of your visitor.
+**Satelize** is a small implementation for NodeJS to retrieve user location information (latitude/longitude...) based on IP, combined with expressjs for instance make life easier to get some stuff as latitude/longitude of your visitor.
 
-Inspired and using http://www.telize.com/ service.
+Inspired and using http://www.telize.com/ service. Free today.
 
 You will find informations there too.
 
