@@ -11,7 +11,8 @@
     "location",
     "geolocation",
     "address",
-    "nodejs"
+    "nodejs",
+    "telize"
   ],
   "author": {
     "name": "Julien Valéry",
