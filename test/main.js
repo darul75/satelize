@@ -1,5 +1,5 @@
 // test/main.js
-var satelize = require('satelize');
+var satelize = require('../lib/satelize');
 var assert = require("assert");
 
 describe('service calls', function() {
