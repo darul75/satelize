@@ -5,7 +5,7 @@
     "type": "git",
     "url": "https://github.com/darul75/satelize"
   },
-  "version": "0.0.3",
+  "version": "0.0.4",
   "keywords": [
     "ip",
     "location",
@@ -18,12 +18,12 @@
     "name": "Julien Valéry",
     "email": "darul75@gmail.com"
   },
-  "main": "./index.js",
+  "main": "./lib/satelize",
   "scripts": {
     "test": "mocha test/*.js"
   },
   "engines": {
-    "node": ">=0.8.16"
+    "node": ">=0.6.x"
   },
   "devDependencies": {   
    "mocha": ""

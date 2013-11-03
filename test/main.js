@@ -1,5 +1,5 @@
 // test/main.js
-var satelize = require('../index');
+var satelize = require('satelize');
 var assert = require("assert");
 
 describe('service calls', function() {
@@ -9,6 +9,9 @@ describe('service calls', function() {
     			if (err) console.log(err);
     			
     			var d = JSON.parse(geoData);
+
+                console.log(d);
+
     			assert.equal(d.country, 'Netherlands');
     			assert.notEqual(d.country, 'France');
 
