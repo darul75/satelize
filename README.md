@@ -27,34 +27,36 @@ npm install satelize
 
 ## Usage
 
-    satelize = require('satelize');
-    
-    satelize.satelize({ip:'46.19.37.108'}, function(err, geoData) {
-      // process err
-      
-      // if data is JSON, we may wrap it in js object
-      var obj = JSON.parse(geoData);
-      
-      
-      // if used with expressjs
-      // res.send(geoData);
-      // res.json...
-    });
-    
-    
-    // MORE EXAMPLES
-    
-    satelize.satelize({ip:'46.19.37.108'}, function(err, geoData) {
-    }); // json output for this ip
-    
-    satelize.satelize({ip:'46.19.37.108', JSONP: true}, function(err, geoData) {
-    }); // jsonp output for this ip
+```javascript
+satelize = require('satelize');
+
+satelize.satelize({ip:'46.19.37.108'}, function(err, geoData) {
+  // process err
   
-    satelize.satelize({}, function(err, geoData) {
-    }); // json output request ip, meaning server
+  // if data is JSON, we may wrap it in js object
+  var obj = JSON.parse(geoData);
+  
+  
+  // if used with expressjs
+  // res.send(geoData);
+  // res.json...
+});
     
-    satelize.satelize({, JSONP: true}, function(err, geoData) {
-    }); // jsonp output request ip
+    
+// MORE EXAMPLES
+
+satelize.satelize({ip:'46.19.37.108'}, function(err, geoData) {
+}); // json output for this ip
+
+satelize.satelize({ip:'46.19.37.108', JSONP: true}, function(err, geoData) {
+}); // jsonp output for this ip
+
+satelize.satelize({}, function(err, geoData) {
+}); // json output request ip, meaning server
+
+satelize.satelize({, JSONP: true}, function(err, geoData) {
+}); // jsonp output request ip
+```    
     
 ## Return    
 
@@ -77,28 +79,28 @@ npm install satelize
 
 Details
 
-- ip (Visitor IP address, or IP address specified as parameter)
-- country_code (Two-letter ISO 3166-1 alpha-2 country code)
-- country_code3 (Three-letter ISO 3166-1 alpha-3 country code)
-- country (Name of the country)
-- region_code (Two-letter ISO-3166-2 state / region code)
-- region (Name of the region)
-- city (Name of the city)
-- postal_code (Postal code / Zip code)
-- continent_code (Two-letter continent code)
-- latitude (Latitude)
-- longitude (Longitude)
-- dma_code (DMA Code)
-- area_code (Area Code)
-- asn (Autonomous System Number)
-- isp (Internet service provider)
-- timezone (Time Zone)
+- **ip** (Visitor IP address, or IP address specified as parameter)
+- **country_code** (Two-letter ISO 3166-1 alpha-2 country code)
+- **country_code3** (Three-letter ISO 3166-1 alpha-3 country code)
+- **country** (Name of the country)
+- **region_code** (Two-letter ISO-3166-2 state / region code)
+- **region** (Name of the region)
+- **city** (Name of the city)
+- **postal_code** (Postal code / Zip code)
+- **continent_code** (Two-letter continent code)
+- **latitude** (Latitude)
+- **longitude** (Longitude)
+- **dma_code** (DMA Code)
+- **area_code** (Area Code)
+- **asn** (Autonomous System Number)
+- **isp** (Internet service provider)
+- **timezone** (Time Zone)
 
 
 ## Options
 
-- ip : if not set, give request ip.
-- JSONP : if set give JSONP output, default format is json. I do not like JSONP ;)
+- **ip** : if not set, give request ip.
+- **JSONP** : if set give JSONP output, default format is json. I do not like JSONP ;)
 
 ## License
 
