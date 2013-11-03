@@ -26,7 +26,7 @@ npm install satelize
 ## Usage
 
 ```javascript
-satelize = require('satelize');
+var satelize = require('satelize');
 
 satelize.satelize({ip:'46.19.37.108'}, function(err, geoData) {
   // process err
