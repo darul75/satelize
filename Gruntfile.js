@@ -14,7 +14,7 @@ module.exports = function(grunt) {
         preserveComments: 'some',
         report: 'min',
         banner: '/*! \n* @license <%= pkg.name %> - v<%= pkg.version %>\n' + 
-         '* (c) 2013 Julien VALERY https://github.com/darul75/ng-prettyjson\n' +
+         '* (c) 2013 Julien VALERY https://github.com/darul75/satelize\n' +
          '* License: MIT \n*/\n'
         },         
         files: {'lib/satelize.js': ['src/satelize.js']
