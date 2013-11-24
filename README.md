@@ -14,6 +14,10 @@ With expressjs for instance, you can get your request IP, then just need to use 
 
 And it is done.
 
+## Demo
+
+https://demo-c9-darul75_1.c9.io/satelize
+
 ## Install
 
 ~~~
