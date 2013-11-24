@@ -16,7 +16,7 @@ And it is done.
 
 ## Demo
 
-https://demo-c9-darul75_1.c9.io/satelize
+http://darul-demo.herokuapp.com/satelize
 
 ## Install
 
