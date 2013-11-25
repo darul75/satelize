@@ -1,7 +1,7 @@
 {
   "name": "satelize",
   "description": "Get location details (latitude, longitude...) from IP visitor, server side NodeJS module",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "author": {
     "name": "Julien Valéry",
     "email": "darul75@gmail.com"

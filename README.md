@@ -29,6 +29,11 @@ npm install satelize
 ```javascript
 var satelize = require('satelize');
 
+// Example retrieve IP from request
+// var ip = req.header('x-forwarded-for') || req.connection.remoteAddress;
+
+// then satelize call 
+
 satelize.satelize({ip:'46.19.37.108'}, function(err, geoData) {
   // process err
   
@@ -53,7 +58,7 @@ satelize.satelize({ip:'46.19.37.108', JSONP: true}, function(err, geoData) {
 satelize.satelize({}, function(err, geoData) {
 }); // json output request ip, meaning server
 
-satelize.satelize({, JSONP: true}, function(err, geoData) {
+satelize.satelize({JSONP: true}, function(err, geoData) {
 }); // jsonp output request ip
 ```    
     
