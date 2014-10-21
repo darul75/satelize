@@ -106,6 +106,10 @@ Details
 - **ip** : if not set, give request ip.
 - **JSONP** : if set give JSONP output, default format is json. I do not like JSONP ;)
 
+## Metrics
+
+[![NPM](https://nodei.co/npm/satelize.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/satelize/)
+
 ## License
 
 The MIT License (MIT)
