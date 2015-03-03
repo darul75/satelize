@@ -20,6 +20,7 @@ Satelize.prototype.init = function() {
 
 Satelize.prototype.satelize = function(options, next) {
   var path = (options.ip ? ('/'+options.ip) : '') + (options.JSONP ? serviceJSONP : '');
+  var timeout = options.timeout || 1000;
   var opts = {
     hostname: serviceHost,
     path: servicePath + path,
@@ -34,7 +35,7 @@ Satelize.prototype.satelize = function(options, next) {
     res.on('end', function() { return next(null, output); });
   });
   req.on('error', function(e) { return next(e); });      
-  req.setTimeout(1000, function() { return next(new Error('timeout')); });
+  req.setTimeout(timeout, function() { return next(new Error('timeout')); });
   req.end();
   return this;
 };

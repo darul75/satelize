@@ -105,6 +105,7 @@ Details
 
 - **ip** : if not set, give request ip.
 - **JSONP** : if set give JSONP output, default format is json. I do not like JSONP ;)
+- **timeout** : default 1000ms
 
 ## Metrics
 
