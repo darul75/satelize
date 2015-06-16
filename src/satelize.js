@@ -34,7 +34,7 @@ Satelize.prototype.satelize = function(options, next) {
     res.on('data', function (chunk) { output += chunk; });
     res.on('end', function() { if(!hasTimeout) return next(null, output); });
   });
-  req.on('error', function(e) { return next(e); });      
+  req.on('error', function(e) {if(!hasTimeout) return next(e); });      
   req.setTimeout(timeout, function() { hasTimeout=true; return next(new Error('timeout')); });
   req.end();
   return this;
