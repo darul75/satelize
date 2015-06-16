@@ -21,21 +21,21 @@ Satelize.prototype.init = function() {
 Satelize.prototype.satelize = function(options, next) {
   var path = (options.ip ? ('/'+options.ip) : '') + (options.JSONP ? serviceJSONP : '');
   var timeout = options.timeout || 1000;
+  var hasTimeout = false;
   var opts = {
     hostname: serviceHost,
     path: servicePath + path,
     method: 'GET',
     port: 80
   };
-
   var req = http.request(opts, function(res) {
     res.setEncoding('utf8');
-    var output = '';
+  var output = '';
     res.on('data', function (chunk) { output += chunk; });
-    res.on('end', function() { return next(null, output); });
+    res.on('end', function() { if(!hasTimeout) return next(null, output); });
   });
   req.on('error', function(e) { return next(e); });      
-  req.setTimeout(timeout, function() { return next(new Error('timeout')); });
+  req.setTimeout(timeout, function() { hasTimeout=true; return next(new Error('timeout')); });
   req.end();
   return this;
 };
