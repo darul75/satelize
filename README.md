@@ -107,6 +107,10 @@ Details
 - **JSONP** : if set give JSONP output, default format is json. I do not like JSONP ;)
 - **timeout** : default 1000ms
 
+## Release
+
+- 0.1.2: fix timeout duplicate callback call
+
 ## Metrics
 
 [![NPM](https://nodei.co/npm/satelize.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/satelize/)
