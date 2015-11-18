@@ -2,9 +2,9 @@
 
 **Satelize** NodeJS module to retrieve user location information based on IP, combined with expressjs for instance make life easier to get some stuff as latitude/longitude of your visitor.
 
-Inspired and using http://www.telize.com/ service. Free today.
+Inspired and using http://www.telize.com/ service. ~~Free today~~.
 
-You will find informations there too.
+As API is not free anymore, it uses a small dataset (provided by maxmind) to fetch information about IP requested, it won't work for all cases.
 
 ## Why ?
 
@@ -17,6 +17,8 @@ And it is done.
 ## Demo
 
 http://darul-demo.herokuapp.com/satelize
+
+// need to be updated with new version
 
 ## Install
 
