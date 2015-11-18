@@ -1,4 +1,4 @@
-# Satelize [![NPM version](https://badge.fury.io/js/satelize.png)](http://badge.fury.io/js/satelize) [![Build Status](https://travis-ci.org/darul75/satelize.png?branch=master)](https://travis-ci.org/darul75/satelize) [![Total views](https://sourcegraph.com/api/repos/github.com/darul75/satelize/counters/views.png)](https://sourcegraph.com/github.com/darul75/satelize)
+# Satelize [![NPM version](https://badge.fury.io/js/satelize.png)](http://badge.fury.io/js/satelize) [![Build Status](https://travis-ci.org/darul75/satelize.png?branch=master)](https://travis-ci.org/darul75/satelize)
 
 **Satelize** NodeJS module to retrieve user location information based on IP, combined with expressjs for instance make life easier to get some stuff as latitude/longitude of your visitor.
 
@@ -32,51 +32,32 @@ var satelize = require('satelize');
 // Example retrieve IP from request
 // var ip = req.header('x-forwarded-for') || req.connection.remoteAddress;
 
-// then satelize call 
+// then satelize call
 
-satelize.satelize({ip:'46.19.37.108'}, function(err, geoData) {
-  // process err
-  
-  // if data is JSON, we may wrap it in js object
-  var obj = JSON.parse(geoData);
-  
-  
+satelize.satelize({ip:'46.19.37.108'}, function(err, payload) {
   // if used with expressjs
-  // res.send(geoData);
+  // res.send(payload);
   // res.json...
 });
-    
-    
-// MORE EXAMPLES
+```
 
-satelize.satelize({ip:'46.19.37.108'}, function(err, geoData) {
-}); // json output for this ip
-
-satelize.satelize({ip:'46.19.37.108', JSONP: true}, function(err, geoData) {
-}); // jsonp output for this ip
-
-satelize.satelize({}, function(err, geoData) {
-}); // json output request ip, meaning server
-
-satelize.satelize({JSONP: true}, function(err, geoData) {
-}); // jsonp output request ip
-```    
-    
-## Return    
+## Return
 
 ~~~ json
 {
     "ip": "46.19.37.108",
-    "country_code": "NL",
-    "country_code3": "NLD",
-    "country": "Netherlands",
     "continent_code": "EU",
+    "continent": {
+      "de": "Europa",
+      "en": "Europe"
+    },
+    "country_code": "NL",
+    "country": {
+      "de": "Niederlande",
+      "en": "Netherlands"
+    },
     "latitude": 52.5,
     "longitude": 5.75,
-    "dma_code": "0",
-    "area_code": "0",
-    "asn": "AS196752",
-    "isp": "Tilaa V.O.F.",
     "timezone":"Europe/Amsterdam"
 }
 ~~~
@@ -85,30 +66,21 @@ Details
 
 - **ip** (Visitor IP address, or IP address specified as parameter)
 - **country_code** (Two-letter ISO 3166-1 alpha-2 country code)
-- **country_code3** (Three-letter ISO 3166-1 alpha-3 country code)
-- **country** (Name of the country)
-- **region_code** (Two-letter ISO-3166-2 state / region code)
-- **region** (Name of the region)
-- **city** (Name of the city)
-- **postal_code** (Postal code / Zip code)
+- **country** (Names of the country)
+- **continent** (Names of the continent)
 - **continent_code** (Two-letter continent code)
 - **latitude** (Latitude)
 - **longitude** (Longitude)
-- **dma_code** (DMA Code)
-- **area_code** (Area Code)
-- **asn** (Autonomous System Number)
-- **isp** (Internet service provider)
 - **timezone** (Time Zone)
-
 
 ## Options
 
-- **ip** : if not set, give request ip.
-- **JSONP** : if set give JSONP output, default format is json. I do not like JSONP ;)
+- **ip** : IPV4 better.
 - **timeout** : default 1000ms
 
 ## Release
 
+- 0.2.0: api not free anymore, use of DB instead
 - 0.1.2: fix timeout duplicate callback call
 
 ## Metrics
