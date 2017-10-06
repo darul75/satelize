@@ -35,6 +35,14 @@ Satelize.prototype.satelize = function(options, next) {
   var data = this.db.getGeoDataSync(options.ip);
 
   if (data) {
+
+    if (!data.country) {
+      data.country = {
+        iso_code: null,
+        names: null
+      }
+    }
+
     return next(null, {
       ip: options.ip,
       continent_code: data.continent.code,
