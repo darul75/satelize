@@ -22,7 +22,7 @@ function Satelize() {
 Satelize.prototype.init = function() {
 
   //  load db
-  this.db = mmdbreader.openSync(path.join(__dirname,'/DB/20151116/GeoLite2-City.mmdb'));
+  this.db = mmdbreader.openSync(path.join(__dirname,'/DB/20171003/GeoLite2-City.mmdb'));
 
   this.initialized = true;
 };
@@ -35,6 +35,14 @@ Satelize.prototype.satelize = function(options, next) {
   var data = this.db.getGeoDataSync(options.ip);
 
   if (data) {
+
+    if (!data.country) {
+      data.country = {
+        iso_code: null,
+        names: null
+      }
+    }
+
     return next(null, {
       ip: options.ip,
       continent_code: data.continent.code,
