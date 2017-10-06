@@ -22,7 +22,7 @@ function Satelize() {
 Satelize.prototype.init = function() {
 
   //  load db
-  this.db = mmdbreader.openSync(path.join(__dirname,'/DB/20151116/GeoLite2-City.mmdb'));
+  this.db = mmdbreader.openSync(path.join(__dirname,'/DB/20171003/GeoLite2-City.mmdb'));
 
   this.initialized = true;
 };
